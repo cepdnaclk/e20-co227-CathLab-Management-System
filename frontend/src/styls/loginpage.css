@@ -1,0 +1,165 @@
+/* General Styles */
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+}
+
+.main-container {
+  margin-top: 20px;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Minimum height of the viewport */
+}
+
+.content {
+  flex: 1; /* Allow content to grow and take available space */
+}
+
+
+
+/* General styles */
+.form-container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-Form {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-Form h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.login-Form label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.login-Form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.login-Form input:focus {
+  border-color: #3e66c4;
+  outline: none;
+}
+
+.login-Form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #3e66c4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-Form button:hover {
+  background-color: #507dfa;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Loading Indicator */
+.loader1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .form-container-login {
+      padding: 15px;
+  }
+
+  .login-Form {
+      padding: 15px;
+  }
+
+  .login-Form h1 {
+      font-size: 1.5rem;
+  }
+
+  .login-Form input {
+      font-size: 0.9rem;
+      padding: 8px;
+  }
+
+  .login-Form button {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 480px) {
+  .login-Form {
+      padding: 10px;
+  }
+
+  .login-Form h1 {
+      font-size: 1.2rem;
+  }
+
+  .login-Form input {
+      font-size: 0.8rem;
+      padding: 6px;
+  }
+
+  .login-Form button {
+      padding: 8px;
+      font-size: 0.8rem;
+  }
+}
+
+.delete-account-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    padding: 20px;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.delete-account-form {
+  max-width: 100%;
+  background-color: #f5f5f5;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+}

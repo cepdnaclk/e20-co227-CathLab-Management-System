@@ -1,0 +1,102 @@
+/* Footer.css */
+
+.footer {
+  background-color: #121928;
+  color: white;
+  text-align: left;
+  background: linear-gradient(45deg, #001f3f, #214061, #001f3f, #031e3a); /* Gradient Background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* width: 100vw; */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 84vw;
+  margin: auto;
+  /* border: yellow 1px solid; */
+}
+
+
+.footer-section {
+  width: 20vw;
+  padding-top: 20px;
+  min-width: 250px;
+  /* border: red solid 1px; */
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.footer-section .contact span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 1vh;
+  /* border: red solid 1px; */
+}
+
+.contact img{
+  width: 25px;
+  height: 25px;
+  margin: 5px 10px 0 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ec6b37;
+}
+
+
+
+.social-links img{
+  width: 30px;
+  height: 30px;
+  margin: 5px 20px 0 0;
+  transition: ease-in-out 0.3s;
+}
+
+
+
+
+.footer-section .social .social-links a {
+  margin-right: 10px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-section .social .social-links a:hover {
+  color: #ec6b37;
+}
+
+.footer-bottom {
+  background-color: #0c1424;
+  padding: 6px;
+  text-align: center;
+  font-size: 14px;
+}

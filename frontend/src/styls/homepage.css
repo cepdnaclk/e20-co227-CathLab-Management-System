@@ -1,0 +1,275 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Home Page Styling */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  position: relative;
+  /* Removed conflicting linear-gradient background */
+}
+
+/* Header Styling */
+.home-header {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(3, 28, 95), rgb(203, 224, 255));
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideDown 1s ease-out;
+  margin-bottom: 10px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.home-header h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #fdff86;
+}
+
+/* Main Container Styling */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 80px; /* Top padding = header height + spacing, Bottom padding = footer height + spacing */
+  margin: 0 auto;
+  flex: 1; /* Allow it to grow and fill available space */
+}
+
+/* Home info section with animation */
+.home-info {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  animation: backgroundOpacityChange 6s ease-in-out infinite; /* Apply background opacity animation */
+}
+
+/* Animated border effect for home info section */
+.home-info::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, #507dfa, #3e66c4, #507dfa);
+  background-size: 600% 600%; /* Increase size for smooth animation */
+  border-radius: 12px; /* Slightly larger to create a border effect */
+  z-index: -1; /* Place behind the main content */
+  animation: borderColorBand 8s linear infinite; /* Apply border color band animation */
+}
+
+.home-info-detail {
+  flex: 1;
+  padding: 30px;
+}
+
+.home-info-detail h3 {
+  font-size: 1.8rem;
+  color: #eeffa1;
+  margin-bottom: 15px;
+}
+
+.home-info-detail p {
+  font-size: 1.2rem;
+  color: #a1fcb3;
+  margin-bottom: 10px;
+}
+
+.b_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.b_container button:hover {
+  background-color: #3e66c4;
+}
+
+/* Image container styling */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.homeimage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  animation: zoomIn 1.5s ease-in-out;
+}
+/* Animations */
+@keyframes slideDown {
+  from {
+      top: -100px;
+      opacity: 0;
+  }
+  to {
+      top: -50px;
+      opacity: 1;
+  }
+}
+
+@keyframes borderColorBand {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes backgroundOpacityChange {
+  0%, 100% {
+      background-color: rgba(62, 98, 139, 0.95);
+  }
+  50% {
+      background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-header {
+      margin-bottom: 10px;
+  }
+
+  .home-container {
+      margin-top: 20px;
+      padding: 120px 20px 80px; /* Adjust top padding if header height changes */
+  }
+
+  .home-info {
+      flex-direction: column;
+  }
+
+  .home-info-detail, .image-container {
+      padding: 20px;
+  }
+
+  .home-header h1 {
+      font-size: 1.5rem;
+  }
+
+  .home-header p {
+      font-size: 1rem;
+  }
+
+  .b_container button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 859px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-content > .logo {
+      margin-left: 0;
+  }
+
+  .social-links {
+      margin-top: 10px;
+  }
+}
+
+/* Uiverse.io Button Styling */
+.staffLogin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.staffLogin:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.staffLogin:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.staffLogin span {
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.staffLogin:hover span {
+  color: #ff0000;
+  font-size: 1.2rem;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.95);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.background1 {
+  display: flex;
+  justify-content: center;
+}

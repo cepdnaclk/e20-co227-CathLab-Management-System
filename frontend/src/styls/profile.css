@@ -1,0 +1,125 @@
+.prof-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #072452, #f0f0f0, #143467);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+    text-align: center; /* Center the entire content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    opacity: 0.8;
+    animation: gradientShift 4s ease-in-out infinite; /* Add animation */
+}
+
+/* Keyframes for the background gradient animation */
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(145deg, #072452, #f0f0f0);
+    }
+    50% {
+        background: linear-gradient(145deg, #004d99, #ffffff);
+    }
+    100% {
+        background: linear-gradient(145deg, #072452, #f0f0f0);
+    }
+}
+
+.prof-pic-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.prof-details {
+    width: 100%;
+    padding: 0 50px;
+    text-align: left;
+}
+
+/* Common style for all details */
+.prof-detail {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1f1f1f;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f7f7f7; /* Background color */
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Change background color on hover */
+.prof-detail:hover {
+    background-color: #e0e0e0;
+}
+
+.prof-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.prof-email a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.prof-email a:hover {
+    text-decoration: underline;
+}
+
+/* Styling the full-size profile picture */
+.profile-picture-full {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    margin: 20px auto;
+}
+
+/* Back and edit buttons */
+.back-button, .edit-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.back-button img, .edit-button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Centering the buttons */
+.button-container {
+    text-align: center;
+}
+
+.profile-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/homeblur1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    filter: blur(8px);
+    z-index: -1;
+}

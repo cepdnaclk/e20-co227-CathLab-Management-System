@@ -1,0 +1,176 @@
+/* General Navbar Styles */
+.nav-bar {
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items left and right */
+    padding: 4px 4px;
+    background: linear-gradient(45deg, #001f3f, #007bff, #001f3f, #58a9ff); /* Gradient Background */
+    background-size: 200% 200%;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: gradientAnimation 10s ease infinite; /* Apply animation */
+    margin-bottom: 20px;
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Left Section */
+.nav-bar .home-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.nav-bar .home-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-bar .home-icon p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Middle Section (Optional if you have items centered) */
+.nav-bar .middle-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Right Section */
+.nav-bar .staff-container, .nav-bar .user-section {
+    position: relative;
+}
+
+.nav-bar .staf-view, .nav-bar .user-name, .nav-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar button:hover, .nav-bar .staf-view:hover, .nav-bar .user-name:hover {
+    opacity: 0.8;
+}
+
+.nav-bar .img-up, .nav-bar .pat-search, .nav-bar .graphs, .nav-bar .patient-reg {
+    margin-left: 20px;
+}
+
+/* Staff Dropdown */
+.nav-bar .staff-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #001f3f;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-bar .staff-dropdown p {
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar .staff-dropdown p:hover {
+    background-color: #001f3f;
+    color: white;
+}
+
+/* Profile Dropdown */
+.nav-bar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    color: #001f3f;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-bar .dropdown-menu p {
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar .dropdown-menu p:hover {
+    background-color: #001f3f;
+    color: white;
+}
+
+/* Profile Picture */
+.nav-bar .nav-prof-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-bar .home-icon {
+        margin-bottom: 10px;
+    }
+
+    .nav-bar .middle-section,
+    .nav-bar .img-up, 
+    .nav-bar .pat-search, 
+    .nav-bar .graphs, 
+    .nav-bar .patient-reg, 
+    .nav-bar .staf-view {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .nav-bar .nav-prof-pic {
+        width: 30px;
+        height: 30px;
+    }
+}
