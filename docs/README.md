@@ -4,7 +4,7 @@ permalink: index.html
 
 # Please update this with your repository name and title
 repository-name: e20-co227-CathLab-Management-System
-title:
+title: CathLab-Management-System
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
@@ -38,12 +38,6 @@ The Cathlab Management System is a software solution designed to transform and m
 The current management processes in Cathlab are heavily reliant on manual systems, paper records, and Word documents to maintain patient information and reports. These methods are extremely time-consuming, prone to errors, and affect the efficient management of data regarding patients and their respective treatment outcomes. Additionally, this lack of a centralized digital solution limits data accessibility and scalability as patient volumes increase.
 The proposed Cathlab Management System aims to address these inefficiencies by introducing an integrated and automated system that enhances workflow efficiency, data accuracy, and overall patient care.
 
-## Other Sub Topics
-
-.....
-
-## Links
-## Links
 
 - [Project Repository](https://github.com/cepdnaclk/e20-co227-CathLab-Management-System){:target="_blank"}
 - [Project Page](https://cepdnaclk.github.io/e20-co227-CathLab-Management-System){:target="_blank"}
