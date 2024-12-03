@@ -69,8 +69,8 @@ Statistical Analysis and Insights
 ## Links
 ## Links
 
-- [Project Repository](https://github.com/cepdnaclk/e20-co227-CathLab-Management-System){:target="_blank"}
-- [Project Page]](https://projects.ce.pdn.ac.lk/co227/e20/CathLab-Management-System/){:target="_blank"}
+- [Project Repository](https://github.com/cepdnaclk/e20-co227-CathLab-Management-System)
+- [Project Page](https://projects.ce.pdn.ac.lk/co227/e20/CathLab-Management-System/)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
