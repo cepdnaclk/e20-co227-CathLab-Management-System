@@ -9,8 +9,8 @@ title: CathLab-Management-System
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# CathLab-Management-System
-
+# project title
+CathLab-Management-System
 ---
 
 <!-- 
@@ -20,10 +20,10 @@ This is a sample image, to show how to add images to your page. To learn more op
  -->
 
 ## Team
--  E/20/284, Peiris T.M.S.U., [e20284@eng.pdn.ac.lk](mailto:name@email.com)
--  E/20/279, Panawennage L.S., [e30279@eng.pdn.ac.lk](mailto:name@email.com)
--  E/20/286, Perera K.M.S., [e20286@eng.pdn.ac.lk](mailto:name@email.com)
--  E/20/078, Dissanayaka D.M.N.H. , [e20078@eng.pdn.ac.lk](mailto:name@email.com)
+-  E/20/284, Peiris T.M.S.U., [e20284@eng.pdn.ac.lk](mailto:e20284@eng.pdn.ac.lk)
+-  E/20/279, Panawennage L.S., [e30279@eng.pdn.ac.lk](mailto:e20279@eng.pdn.ac.lk)
+-  E/20/286, Perera K.M.S., [e20286@eng.pdn.ac.lk](mailto:e20286@eng.pdn.ac.lk)
+-  E/20/078, Dissanayaka D.M.N.H. , [e20078@eng.pdn.ac.lk](mailto:e20078@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -70,7 +70,7 @@ Statistical Analysis and Insights
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/e20-co227-CathLab-Management-System)
-- [Project Page](https://projects.ce.pdn.ac.lk/co227/e20/CathLab-Management-System/)
+- [Project Page](https://cepdnaclk.github.io/e20-co227-CathLab-Management-System/)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
