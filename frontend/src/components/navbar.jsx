@@ -24,7 +24,7 @@ export default function Navbar() {
     // Fetch user data (username, superuser status, and role information)
     const fetchUser = async () => {
         try {
-            const res = await api.get("/api/user/now/"); // Fetch user data from the API
+            const res = await api.get("/user/now/"); // Fetch user data from the API
             setUser(res.data.username); // Set the user's username
             setIsSuperUser(res.data.is_superuser); // Check if the user is a superuser
             set_is_doc(res.data.is_doctor); // Set doctor role status
@@ -38,7 +38,7 @@ export default function Navbar() {
     // Fetch profile data (check account status and profile image)
     const fetchProfile = async () => {
         try {
-            const res = await api.get("/api/profile/"); // Fetch profile data from the API
+            const res = await api.get("/profile/"); // Fetch profile data from the API
             setIsAccount(res.data.is_account); // Check if the user has an account
             if (res.data.is_account) {
                 const imageUrl = res.data.image.startsWith('/') ? res.data.image.substring(1) : res.data.image;

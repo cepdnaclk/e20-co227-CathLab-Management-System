@@ -17,7 +17,7 @@ import P_account from "./pages/patientreg"
 import Protected from "./components/protected"
 import Graphs from "./pages/graphs"
 import Footer from "./components/Footer"
-import "./styls/App.css"
+import "./styls/APP.css"
 import h3back from "./images/h3back.jpg";
 
 

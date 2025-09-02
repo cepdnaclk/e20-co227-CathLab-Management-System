@@ -70,21 +70,20 @@ export default function RegisterForm(props) {
     
         try {
             // API call to create or update profile based on the method prop
-            if (props.method === "create") {
-                await api.post("/api/doctors/", data, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
-                });
-                setSuccess("Profile created successfully!"); // Set success message for creation
-            } else if (props.method === "update") {
-                await api.patch("/api/profile/update/", data, {
+            if (props.method === "register") {
+                await api.post("/doctors/", data, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
                 });
-                setSuccess("Profile updated successfully!"); // Set success message for update
+            } else {
+                await api.patch("/profile/update/", data, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
             }
+            alert("Doctor profile updated successfully!"); // Success message
             setTimeout(() => navigate('/home'), 1000); // Redirect to home page after a brief delay
         } catch (error) {
             setError('Error updating doctor profile: ' + JSON.stringify(error.response?.data)); // Handle errors and display message
@@ -96,7 +95,7 @@ export default function RegisterForm(props) {
     // Function to fetch profile data when updating a profile
     const fetchProfile = async () => {
         try {
-            const res = await api.get("/api/profile/"); // Fetch profile data from the API
+            const res = await api.get("/profile/"); // Fetch profile data from the API
             setFormData(res.data); // Set the fetched data in form fields
             const [year1, month1, date1] = res.data.birth.split('-'); // Split the birthdate into parts
             setFormData(prevdata => ({

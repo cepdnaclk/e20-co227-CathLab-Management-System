@@ -83,7 +83,7 @@ function Report() {
   // Sends request to process the image for the given index
   const processing = async (id1) => {
     try {
-      const response3 = await api.post("/api/imageProcess/", {
+      const response3 = await api.post("/imageProcess/", {
         path2: imgpath[0],
         value0: id1,
       });
@@ -339,7 +339,7 @@ function Report() {
   // Fetches the logged-in doctor's profile
   const fetchProfile = async () => {
     try {
-      const res = await api.get("/api/profile/");
+      const res = await api.get("/profile/");
       setDoctor(`Dr.${res.data.name} , ${res.data.specility}`);
     } catch (error) {
       console.error("Error fetching profile data:", error);

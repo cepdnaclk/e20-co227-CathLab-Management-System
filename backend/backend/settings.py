@@ -15,9 +15,20 @@ from datetime import timedelta
 from dotenv import load_dotenv
 import os
 import sys
-import django_heroku
+try:
+    import django_heroku
+except ImportError:
+    django_heroku = None
 import dj_database_url
-from decouple import config
+try:
+    from decouple import config
+except ImportError:
+    # Fallback for missing decouple
+    def config(key, default=None, cast=None):
+        value = os.getenv(key, default)
+        if cast and value is not None:
+            return cast(value)
+        return value
 
 load_dotenv()
 
@@ -99,16 +110,12 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "co200final1_0",
-        "USER": "root",
-        "PASSWORD": "snake22693ICE",
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 # Password validation
@@ -158,7 +165,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWS_CREDENTIALS = True
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+if django_heroku:
+    django_heroku.settings(locals())
 
 # Static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -17,7 +17,7 @@ function Protected({ children }) {
     const refreshToken = async () => {
         const refreshToken = localStorage.getItem(REFRESH_TOKEN); // Getting the refresh token from localStorage
         try {
-            const res = await api.post("/api/token/refresh/", {
+            const res = await api.post("/token/refresh/", {
                 refresh: refreshToken, // Sending refresh token in the API request
             });
             // If refresh is successful, update the access token in localStorage

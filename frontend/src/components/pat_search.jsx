@@ -40,7 +40,7 @@ export default function P_search() {
 
   const handlereports = async () => {
     try {
-      const response = await api.post("/api/oldreports/", {
+      const response = await api.post("/oldreports/", {
         person_id: selectedPatient.id,
       });
       setReports(response.data);
@@ -49,7 +49,7 @@ export default function P_search() {
       const image_set = [];
       for (const report of response.data) {
         try {
-          const response1 = await api.post("/api/images/", {
+          const response1 = await api.post("/images/", {
             hos_id: selectedPatient.hospital_id,
             ddate: report.date,
           });

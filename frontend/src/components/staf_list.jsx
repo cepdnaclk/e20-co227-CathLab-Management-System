@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import api from "../api";
 import Card from "./card";
-import Profile from "./Profile";
+import Profile from "./profile";
 import "../styls/style1.css";
 
 export default function Staff() {

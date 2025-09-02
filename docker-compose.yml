@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - DATABASE_URL=sqlite:///db.sqlite3
+    volumes:
+      - ./backend:/app
+      - ./backend/media:/app/media
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev
+    depends_on:
+      - backend
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: cathlab_db
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: cathlab_user
+      MYSQL_PASSWORD: cathlab_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

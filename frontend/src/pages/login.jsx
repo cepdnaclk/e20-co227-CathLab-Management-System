@@ -1,7 +1,7 @@
 import LoginForm from "../components/loginForm"
 
 function Login(){
-    return <LoginForm rout="/api/token/" method="login"/>
+    return <LoginForm rout="/token/" method="login"/>
 }
 
 export default Login

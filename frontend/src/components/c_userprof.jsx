@@ -1,6 +1,6 @@
 import React from "react";
 import api from "../api"; // Importing the API configuration for making backend requests.
-import Profile from "./Profile"; // Importing the Profile component to display user profile details.
+import Profile from "./profile"; // Importing the Profile component to display user profile details.
 
 export default function C_Profile() {
     // State to store user profile data fetched from the backend.
@@ -13,8 +13,8 @@ export default function C_Profile() {
     // Function to fetch the user profile data from the backend API.
     const fetchProfile = async () => {
         try {
-            const res = await api.get("/api/profile/"); // Fetch profile data.
-            setData(res.data); // Save the fetched data into the state.
+            const res = await api.get("/profile/"); // Fetch profile data.
+            setProfileData(res.data); // Update state with fetched profile data.
 
             // Extract and resolve the profile image URL.
             const imageUrl = res.data.image.startsWith('/')

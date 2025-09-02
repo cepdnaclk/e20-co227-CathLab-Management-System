@@ -14,16 +14,10 @@ export default function ProfilePic() {
     // Function to fetch profile data from the API
     const fetchProfile = async () => {
         try {
-            const res = await api.get("/api/profile/"); // Sending a GET request to fetch profile data
-            // Handling image URL path by checking if it starts with '/'
-            const imageUrl = res.data.image.startsWith('/') 
-                ? res.data.image.substring(1) // If it starts with '/', remove it
-                : res.data.image; // Otherwise, keep it as is
-            // Setting the full image URL for the profile picture
-            SetImage(`${import.meta.env.VITE_API_URL}${imageUrl}`);
-        } catch (error) { 
-            console.error("Error fetching profile data:", error); // Log error in case of failure
-            alert("An error occurred while fetching profile data."); // Notify user of error
+            const res = await api.get("/profile/"); // Sending a GET request to fetch profile data
+            setProfileData(res.data); // Setting the profile data to the response received
+        } catch (error) {
+            console.error("Error fetching profile:", error); // Log error to console if request fails
         }
     };
 

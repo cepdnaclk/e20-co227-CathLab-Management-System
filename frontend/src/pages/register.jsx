@@ -6,7 +6,7 @@ function Register(){
     return (
     <div>
         <Navbar />
-        <LoginForm rout="api/user/register/" method="register" />
+        <LoginForm rout="/user/register/" method="register" />
     </div>
     )
 }

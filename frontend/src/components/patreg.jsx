@@ -58,12 +58,12 @@ export default function PatientForm(props) {
 
         try {
             // Check if the method is "create" or "update" and call the respective API endpoint
-            if (props.method === "create") {
-                await api.post("/api/patients/", data);  // Create a new patient
-                setSuccess("Patient created successfully!");
-            } else if (props.method === "update") {
-                await api.patch("/api/patients/update/", data);  // Update an existing patient
-                setSuccess("Patient updated successfully!");
+            if (props.method === "register") {
+                await api.post("/patients/", data);  // Create a new patient
+                alert("Patient registered successfully!"); // Show success message for registration
+            } else {
+                await api.patch("/patients/update/", data);  // Update an existing patient
+                alert("Patient updated successfully!"); // Show success message for update
             }
             
             // Navigate to the '/home' page after a successful operation
